@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showHome()">Minimal A.I.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-link active" onclick="showHome()">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showAllPosts()">All Posts</a></li>
+                <li><a href="#" class="nav-link" onclick="showContact()">Contact Me</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to My Minimal A.I. Blog</h1>
+            <p>Discover stories, insights, and inspiration through my personal journey and experiences.</p>
+            <a href="#" class="cta-button" onclick="showAllPosts()">Explore Posts</a>
+        </section>
+
+        <!-- Latest Posts -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Latest Posts</h2>
+                <div class="blog-grid" id="latestPosts">
+                    <!-- Latest posts will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- All Posts Page -->
+    <div id="allPostsPage" class="hidden">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">All Posts</h2>
+                
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <button class="filter-btn active" onclick="filterPosts('all')">All</button>
+                    <button class="filter-btn" onclick="filterPosts('tech')">Tech</button>
+                    <button class="filter-btn" onclick="filterPosts('lifestyle')">Lifestyle</button>
+                    <button class="filter-btn" onclick="filterPosts('travel')">Travel</button>
+                    <button class="filter-btn" onclick="filterPosts('design')">Design</button>
+                </div>
+
+                <div class="blog-grid" id="allPostsGrid">
+                    <!-- All posts will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Post Page -->
+    <div id="blogPostPage" class="hidden">
+        <section class="section">
+            <div class="container">
+                <div class="blog-post" id="blogPostContent">
+                    <!-- Individual blog post content will be loaded here -->
+                </div>
+                <div style="text-align: center;">
+                    <a href="#" class="cta-button" onclick="showAllPosts()">← Back to All Posts</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contactPage" class="hidden">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="handleContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="GitHub">💻</a>
+            </div>
+            <p>&copy; 2025 ModernBlog. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("g4moKzigeQIBwloeE");
+  })();
+</script>
+   
+
+    
+</body>
+</html>
