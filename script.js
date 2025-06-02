@@ -353,6 +353,7 @@ function addScrollAnimations() {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     init();
+    loadDynamicPosts();  // ⬅️ this loads JSON blog posts from /posts/index.json
     addScrollAnimations();
 
     // Close mobile menu when clicking outside
@@ -384,3 +385,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+async function loadDynamicPosts() {
+    const response = await fetch('posts/index.json');
+    const dynamicPosts = await response.json();
+
+    // Assign unique IDs to dynamic posts (starting after static ones)
+    const offset = blogPosts.length;
+    dynamicPosts.forEach((post, i) => post.id = offset + i + 1);
+
+    blogPosts.push(...dynamicPosts);
+
+    // Refresh views
+    loadLatestPosts();
+    loadAllPosts();
+}
