@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "The Future of Web Development",
+      "excerpt": "Exploring the latest trends and technologies shaping the future of web development, from AI integration to progressive web apps.",
+      "category": "tech",
+      "date": "2025-05-15",
+      "readTime": "5 min read",
+      "image": "💻",
+      "content": "<h2>Introduction</h2><p>Web development is evolving at an unprecedented pace. As we move further into 2025, new technologies and methodologies are reshaping how we build and interact with digital experiences.</p><h2>Key Trends</h2><p>From AI-powered development tools to the rise of edge computing, the landscape is more exciting than ever. Progressive Web Apps continue to bridge the gap between web and native applications, offering users seamless experiences across all devices.</p><h2>Conclusion</h2><p>The future of web development lies in creating more accessible, performant, and user-centric applications that leverage the power of modern technologies while maintaining simplicity and elegance.</p>"
+    },
+    {
+      "id": 2,
+      "title": "Minimalist Living: A Journey to Simplicity",
+      "excerpt": "Discovering the art of living with less and finding more joy in the simple things that truly matter in our daily lives.",
+      "category": "lifestyle",
+      "date": "2025-05-10",
+      "readTime": "7 min read",
+      "image": "🏠",
+      "content": "<h2>The Beginning</h2><p>My journey into minimalist living began with a simple realization: I owned too much stuff, and it was owning me back. The constant clutter was affecting my mental clarity and peace of mind.</p><h2>The Process</h2><p>Decluttering isn't just about throwing things away. It's about being intentional with what you choose to keep and understanding the difference between what you need and what you want.</p><h2>The Benefits</h2><p>Living minimally has brought unexpected benefits: more time, less stress, better focus, and a deeper appreciation for the things that truly add value to my life.</p>"
+    },
+    {
+      "id": 3,
+      "title": "Exploring Hidden Gems in Japan",
+      "excerpt": "A photographic journey through Japan's lesser-known destinations, from tranquil mountain villages to secluded coastal towns.",
+      "category": "travel",
+      "date": "2025-05-05",
+      "readTime": "10 min read",
+      "image": "🗾",
+      "content": "<h2>Off the Beaten Path</h2><p>While Tokyo and Kyoto capture most travelers' attention, Japan's hidden gems offer authentic experiences away from the crowds. These destinations showcase the country's natural beauty and cultural depth.</p><h2>Mountain Villages</h2><p>The mountainous regions of Japan hide villages where time seems to stand still. Traditional architecture, local customs, and warm hospitality create unforgettable memories.</p><h2>Coastal Treasures</h2><p>Japan's coastline offers pristine beaches, fishing villages, and spectacular sunsets that rival any tropical destination, yet remain largely undiscovered by international tourists.</p>"
+    },
+    {
+      "id": 4,
+      "title": "The Psychology of Color in Design",
+      "excerpt": "Understanding how colors influence emotions and behavior, and how to leverage this knowledge in creating impactful design experiences.",
+      "category": "design",
+      "date": "2025-04-28",
+      "readTime": "6 min read",
+      "image": "🎨",
+      "content": "<h2>Color Theory Basics</h2><p>Colors have the power to evoke emotions, influence decisions, and create memorable experiences. Understanding color psychology is crucial for effective design communication.</p><h2>Practical Applications</h2><p>Different colors serve different purposes in design. Warm colors can create energy and excitement, while cool colors promote calm and trust. The key is knowing when and how to use each effectively.</p><h2>Cultural Considerations</h2><p>Color meanings can vary significantly across cultures. What represents luck in one culture might symbolize mourning in another. Global designers must be mindful of these differences.</p>"
+    },
+    {
+      "id": 5,
+      "title": "Building Better Morning Routines",
+      "excerpt": "How establishing a consistent morning routine can transform your productivity, mindset, and overall well-being throughout the day.",
+      "category": "lifestyle",
+      "date": "2025-04-20",
+      "readTime": "4 min read",
+      "image": "☀️",
+      "content": "<h2>The Power of Mornings</h2><p>The first hour of your day sets the tone for everything that follows. A well-structured morning routine can be the difference between a productive day and one filled with reactive stress.</p><h2>Key Elements</h2><p>Successful morning routines typically include elements of mindfulness, physical activity, planning, and personal growth. The key is finding the right combination that works for your lifestyle.</p><h2>Making It Stick</h2><p>Consistency is more important than perfection. Start small, be patient with yourself, and gradually build the routine that will serve you for years to come.</p>"
+    },
+    {
+      "id": 6,
+      "title": "The Rise of Sustainable Technology",
+      "excerpt": "Exploring how technology companies are innovating to create more environmentally friendly solutions and reduce their carbon footprint.",
+      "category": "tech",
+      "date": "2025-04-15",
+      "readTime": "8 min read",
+      "image": "🌱",
+      "content": "<h2>The Need for Change</h2><p>As technology becomes more prevalent in our lives, the environmental impact of digital infrastructure and device manufacturing has become a critical concern that cannot be ignored.</p><h2>Innovative Solutions</h2><p>From renewable energy-powered data centers to biodegradable electronics, companies are finding creative ways to reduce their environmental footprint while maintaining technological advancement.</p><h2>The Future</h2><p>Sustainable technology isn't just about reducing harm—it's about creating positive environmental impact through innovation. The future lies in technology that actively contributes to planetary health.</p>"
+    }
+  ]
+}

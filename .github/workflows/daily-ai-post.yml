@@ -1,0 +1,42 @@
+name: Generate Daily AI Post
+
+on:
+  schedule:
+    # Run daily at 9:00 AM UTC (adjust as needed)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install node-fetch
+        
+    - name: Generate AI post
+      run: node scripts/generate-post.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/posts.json
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Add daily AI post - $(date +'%Y-%m-%d')"
+          git push
+        fi
