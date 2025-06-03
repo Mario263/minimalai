@@ -343,7 +343,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
         }
 
         .read-more {
@@ -354,6 +354,7 @@
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition);
+            margin-top: auto;
         }
 
         .read-more:hover {
