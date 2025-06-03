@@ -124,7 +124,7 @@ let currentTheme = 'light';
 
 // Initialize the website
 function init() {
-    loadLatestPosts();
+    renderHomeLatestPosts();
     loadAllPosts();
     setActiveNavLink('Home');
 }
@@ -220,27 +220,51 @@ function closeMobileMenu() {
 }
 
 // Load latest posts for home page
-function loadLatestPosts() {
+// function loadLatestPosts() {
+//     const latestPostsContainer = document.getElementById('latestPosts');
+//     const latestPosts = blogPosts.slice(0, 3); // Show only 3 latest posts
+
+//     latestPostsContainer.innerHTML = latestPosts.map(post => createBlogCard(post)).join('');
+
+//     // Add animation delay for each card
+//     const cards = latestPostsContainer.querySelectorAll('.blog-card');
+//     cards.forEach((card, index) => {
+//         card.style.animationDelay = `${index * 0.1}s`;
+//     });
+//     document.querySelectorAll('.read-more').forEach(link => {
+//     link.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         const postId = Number(this.getAttribute('data-id'));
+//         showBlogPost(postId);
+//     });
+// });
+// }
+function renderHomeLatestPosts() {
     const latestPostsContainer = document.getElementById('latestPosts');
-    const latestPosts = blogPosts.slice(0, 3); // Show only 3 latest posts
 
-    latestPostsContainer.innerHTML = latestPosts.map(post => createBlogCard(post)).join('');
+    // Sort by date descending (newest first)
+    const sorted = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    const latest = sorted.slice(0, 3); // top 3 latest posts
 
-    // Add animation delay for each card
+    latestPostsContainer.innerHTML = latest.map(post => createBlogCard(post)).join('');
+
+    // Add animation delay
     const cards = latestPostsContainer.querySelectorAll('.blog-card');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
-    document.querySelectorAll('.read-more').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const postId = Number(this.getAttribute('data-id'));
-        showBlogPost(postId);
-    });
-});
-}
 
+    // Bind read more
+    latestPostsContainer.querySelectorAll('.read-more').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const postId = Number(this.getAttribute('data-id'));
+            showBlogPost(postId);
+        });
+    });
+}
 // Load all posts
 function loadAllPosts() {
     const allPostsContainer = document.getElementById('allPostsGrid');
@@ -395,8 +419,10 @@ async function loadDynamicPosts() {
     dynamicPosts.forEach((post, i) => post.id = offset + i + 1);
 
     blogPosts.push(...dynamicPosts);
+    // Sort all posts by date (descending)
+    blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // Refresh views
-    loadLatestPosts();
+    renderHomeLatestPosts();
     loadAllPosts();
 }
