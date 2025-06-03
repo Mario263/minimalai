@@ -1,5 +1,14 @@
 [
   {
+    "title": "Last week, Epic Games held an event called \"The State of Unreal for 20",
+    "excerpt": "Epic Games has always been at the forefront of pushing the boundaries of what...",
+    "category": "tech",
+    "date": "2025-06-03",
+    "readTime": "5 min read",
+    "image": "\ud83e\udd16",
+    "content": "<p>Epic Games has always been at the forefront of pushing the boundaries of what is possible with video games. In this event, they unveiled a new AI technology called \"Unreal Engine 3\" which allows developers to create more realistic characters that can respond in real-time to their environment. This means that players will be able to interact with virtual characters in ways that were previously impossible.</p>\n<p>Another exciting development is the integration of machine learning into game mechanics. Epic Games has created a system called \"Tower Defense\" which uses reinforcement learning algorithms to create new levels and challenges for players. This type of technology could have far-reaching implications for the AI industry, as it shows how machines can learn from user interactions in real time.</p>\n<p>Overall, this event was significant because it showed that artificial intelligence is becoming an integral part of video game development. It's exciting to see how these advancements will be used to create even more immersive and realistic gaming experiences in the future. As for developers, they now have access to cutting-edge AI technology that will allow them to take their games to the next level.</p>"
+  },
+  {
     "title": "Enterprise Alert: PostgreSQL Becomes the Database You Can't Ignore for AI Applications",
     "excerpt": "PostgreSQL has just made an impressive move by becoming one of the top databases in use for artificial intelligence (...",
     "category": "tech",
